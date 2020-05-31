@@ -46,11 +46,14 @@ Aside
 ================================================================================
 
 ```{r}
-# Build interactive network of positions colored by section
-# and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
+CV %>% print_contact_info()
 ```
 
+```{r}
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+# datadrivencv::build_network_logo(CV$entries_data)
+```
 
 ```{r}
 if(params$pdf_mode){
@@ -59,34 +62,6 @@ if(params$pdf_mode){
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mclaibourn/mpc_cv/raw/master/mpc_cv.pdf)")
 }
 ```
-
-Contact {#contact}
---------------------------------------------------------------------------------
-
-```{r}
-CV %>% print_contact_info()
-```
-
-
-
-Data Skills {#skills}
---------------------------------------------------------------------------------
-
-```{r}
-CV %>% print_skill_bars()
-```
-
-
-
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
-
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
-
-The source code is available [on github.com/nstrayer/cv](https://github.com/mclaibourn/mpc_cv).
-
-Last updated on `r Sys.Date()`.
-
 
 
 Main
@@ -123,6 +98,12 @@ CV %<>% print_section('professional_positions')
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
+::: aside
+```{r}
+CV %<>% print_text_block('skills_aside')
+```
+:::
+
 ```{r}
 CV %<>% print_section('education')
 ```
@@ -143,16 +124,8 @@ CV %<>% print_section('teaching')
 ```
 
 
-
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('academic_writing_aside')
-```
-:::
-
 
 ```{r}
 CV %<>% print_section('academic_articles')
@@ -163,16 +136,10 @@ CV %<>% print_section('academic_articles')
 Reports and Selected Writing {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
-::: aside
-```{r}
-CV %<>% print_text_block('report_writing_aside')
-```
-:::
 
 ```{r}
 CV %<>% print_section('report_writing')
 ```
-
 
 
 Grants and Awards {data-icon=laptop}
@@ -197,6 +164,7 @@ Recent Presentations {data-icon=chalkboard}
 ```{r}
 CV %<>% print_section('presentation')
 ```
+
 
 
 ```{r}

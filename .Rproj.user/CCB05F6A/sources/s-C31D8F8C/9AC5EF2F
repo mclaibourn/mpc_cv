@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1109534710",
+    "hash" : "0",
     "id" : "9AC5EF2F",
-    "lastKnownWriteTime" : 1590891862,
-    "last_content_update" : 1590891862,
+    "lastKnownWriteTime" : 1590936719,
+    "last_content_update" : 1590936719549,
     "path" : "~/Box Sync/mpc/mpc_cv/dd_cv.css",
     "project_path" : "dd_cv.css",
     "properties" : {
+        "cursorPosition" : "95,1",
+        "scrollLine" : "90"
     },
     "read_only" : false,
     "read_only_alternatives" : [
