@@ -45,6 +45,9 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
+Contact {#contact}
+--------------------------------------------------------------------------------
+
 ```{r}
 CV %>% print_contact_info()
 ```
@@ -62,6 +65,8 @@ if(params$pdf_mode){
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mclaibourn/mpc_cv/raw/master/mpc_cv.pdf)")
 }
 ```
+
+See my [webpage](https://mclaibourn.github.io/) for a more project-oriented and link-filled portfolio.
 
 
 Main

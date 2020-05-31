@@ -19,3 +19,4 @@ rmarkdown::render("mpc_cv.Rmd",
 # Convert to PDF using Pagedown
 pagedown::chrome_print(input = tmp_html_cv_loc,
                        output = "mpc_cv.pdf")
+
