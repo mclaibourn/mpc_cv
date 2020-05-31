@@ -57,7 +57,7 @@ CV %>% print_contact_info()
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _mclaibourn.github.io/mpc_cv/_")
+  cat("View this CV online with links at _mclaibourn.github.io/mpc_cv_")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mclaibourn/mpc_cv/raw/master/mpc_cv.pdf)")
 }
