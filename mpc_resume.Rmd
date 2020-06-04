@@ -129,6 +129,9 @@ CV %<>% print_text_block('teaching_experience_aside')
 CV %<>% print_section('academic_articles')
 ```
 
+::: aside
+Last updated on `r Sys.Date()`.
+:::
 
 ```{r}
 CV %<>% print_links()

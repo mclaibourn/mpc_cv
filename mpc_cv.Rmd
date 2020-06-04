@@ -132,6 +132,12 @@ CV %<>% print_section('teaching')
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
+::: aside
+Last updated on `r Sys.Date()`.
+
+The source code is available [on github.com/mclaibourn/mpc_cv](https://github.com/mclaibourn/mpc_cv).
+:::
+
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
