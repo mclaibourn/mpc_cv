@@ -53,12 +53,6 @@ CV %>% print_contact_info()
 ```
 
 ```{r}
-# Build interactive network of positions colored by section
-# and connected if they occurred in the same year
-# datadrivencv::build_network_logo(CV$entries_data)
-```
-
-```{r}
 if(params$pdf_mode){
   cat("View this CV online with links at _mclaibourn.github.io/mpc_cv_")
 } else {
@@ -66,7 +60,7 @@ if(params$pdf_mode){
 }
 ```
 
-See my [webpage](https://mclaibourn.github.io/) for a more project-oriented and link-filled portfolio.
+See my [webpage](https://mclaibourn.github.io/) for a more project-oriented portfolio.
 
 
 Main
@@ -88,6 +82,10 @@ Professional Experience {data-icon=suitcase}
 ```{r}
 CV %<>% print_text_block('professional_experience_aside')
 ```
+<br>
+<br>
+<br>
+Last updated on `r Sys.Date()`.
 :::
 
 ```{r}
@@ -96,18 +94,10 @@ CV %<>% print_section('professional_positions')
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
 <br>
-<br>
-<br>
 
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('skills_aside')
-```
-:::
 
 ```{r}
 CV %<>% print_section('education')
@@ -133,8 +123,12 @@ Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside
-Last updated on `r Sys.Date()`.
-
+```{r}
+CV %<>% print_text_block('skills_aside')
+```
+<br>
+<br>
+<br>
 The source code is available [on github.com/mclaibourn/mpc_cv](https://github.com/mclaibourn/mpc_cv).
 :::
 
@@ -143,10 +137,8 @@ CV %<>% print_section('academic_articles')
 ```
 
 
-
 Reports and Selected Writing {data-icon=chart-line}
 --------------------------------------------------------------------------------
-
 
 ```{r}
 CV %<>% print_section('report_writing')

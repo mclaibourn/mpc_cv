@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap");
 
+@page{
+  size: letter portrait;
+  margin: 0.8in 0.45in 0.8in 0.25in;
+}
+
 /* Main text is monserrat*/
 body {
   font-family: "Montserrat", sans-serif;

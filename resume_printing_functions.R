@@ -72,6 +72,7 @@ create_CV_object <-  function(data_location,
                         end,
                         glue::glue('{end} - {start}'))
     ) %>%
+    dplyr::mutate(description_bullets = ifelse(stringr::str_length(description_bullets) == 2, "", description_bullets)) %>% 
     dplyr::arrange(desc(end_num)) %>%
     dplyr::mutate_all(~ ifelse(is.na(.), 'N/A', .))
   

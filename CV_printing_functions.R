@@ -72,6 +72,7 @@ create_CV_object <-  function(data_location,
                         end,
                         glue::glue('{end} - {start}'))
     ) %>%
+    dplyr::mutate(description_bullets = ifelse(stringr::str_length(description_bullets) == 2, "", description_bullets)) %>% 
     dplyr::arrange(desc(end_num)) %>%
     dplyr::mutate_all(~ ifelse(is.na(.), 'N/A', .))
 
@@ -124,7 +125,7 @@ print_section <- function(cv, section_id, glue_template = "default"){
 {timeline}
 
 {description_bullets}
-\n\n\n"
+\n"
   }
 
   section_data <- dplyr::filter(cv$entries_data, section == section_id)

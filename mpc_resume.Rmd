@@ -79,6 +79,10 @@ Professional Experience {data-icon=suitcase}
 ```{r}
 CV %<>% print_text_block('professional_experience_aside')
 ```
+<br>
+<br>
+<br>
+Last updated on `r Sys.Date()`.
 :::
 
 ```{r}
@@ -102,12 +106,12 @@ CV %<>% print_section('teaching')
 ```
 
 
-Selected Writing and Presentations {data-icon=book}
+Selected Publications and Presentations {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('skills_aside')
+CV %<>% print_text_block('teaching_experience_aside')
 ```
 :::
 
@@ -119,18 +123,14 @@ CV %<>% print_section('report_writing')
 CV %<>% print_section('presentation')
 ```
 
-::: aside
-```{r}
-CV %<>% print_text_block('teaching_experience_aside')
-```
-:::
-
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
 
 ::: aside
-Last updated on `r Sys.Date()`.
+```{r}
+CV %<>% print_text_block('skills_aside')
+```
 :::
 
 ```{r}
