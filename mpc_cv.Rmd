@@ -26,6 +26,7 @@ CV <- create_CV_object(
   pdf_mode = params$pdf_mode
 )
 
+
 ```
 
 
@@ -53,11 +54,11 @@ CV %>% print_contact_info()
 ```
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this CV online with links at _mclaibourn.github.io/mpc_cv_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mclaibourn/mpc_cv/raw/master/mpc_cv.pdf)")
-}
+#if(params$pdf_mode){
+#  cat("View this CV online with links at _mclaibourn.github.io/mpc_cv_")
+#} else {
+#  cat("[<i class='fas fa-download'></i> Download a PDF of this #CV](https://github.com/mclaibourn/mpc_cv/raw/master/mpc_cv.pdf)")
+#}
 ```
 
 See my [webpage](https://mclaibourn.github.io/) for a more project-oriented portfolio.
@@ -82,6 +83,9 @@ Professional Experience {data-icon=suitcase}
 ```{r}
 CV %<>% print_text_block('professional_experience_aside')
 ```
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -153,6 +157,14 @@ CV %<>% print_section('grant_award')
 ```
 
 
+Recent Presentations {data-icon=chalkboard}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('presentation')
+```
+
+
 Professional Activities and Service {data-icon=user-friends}
 --------------------------------------------------------------------------------
 
@@ -160,13 +172,6 @@ Professional Activities and Service {data-icon=user-friends}
 CV %<>% print_section('service')
 ```
 
-
-Recent Presentations {data-icon=chalkboard}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('presentation')
-```
 
 
 

@@ -29,7 +29,7 @@ create_CV_object <-  function(data_location,
     if(sheet_is_publicly_readable){
       # This tells google sheets to not try and authenticate. Note that this will only
       # work if your sheet has sharing set to "anyone with link can view"
-      googlesheets4::sheets_deauth()
+      googlesheets4::gs4_deauth()
     } else {
       # My info is in a public sheet so there's no need to do authentication but if you want
       # to use a private sheet, then this is the way you need to do it.
@@ -37,9 +37,10 @@ create_CV_object <-  function(data_location,
       options(gargle_oauth_cache = ".secrets")
     }
 
-    cv$entries_data <- googlesheets4::read_sheet(data_location, sheet = "entries", skip = 1) %>%
-      # Google sheets loves to turn columns into list ones if there are different types
-      dplyr::mutate_if(is.list, purrr::map_chr, as.character)
+    cv$entries_data <- googlesheets4::read_sheet(data_location, sheet = "entries", skip = 1) 
+    # %>%
+    #   # Google sheets loves to turn columns into list ones if there are different types
+    #   dplyr::mutate_if(is.list, purrr::map_chr, as.character)
 
     cv$skills        <- googlesheets4::read_sheet(data_location, sheet = "language_skills", skip = 1)
     cv$text_blocks   <- googlesheets4::read_sheet(data_location, sheet = "text_blocks", skip = 1)

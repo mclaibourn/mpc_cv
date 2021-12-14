@@ -11,3 +11,10 @@ datadrivencv::use_datadriven_cv(
   source_location = "https://github.com/mclaibourn/mpc_cv"
 )
 
+library(tidyverse)
+check <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1nL_I7JWzutRehfgZ0uRmQzn_xrKd8AeDFVLvaV_s3cg/edit?usp=sharing",
+                                   sheet = "entries", skip = 1) 
+# %>%
+  # dplyr::mutate_if(is.list, purrr::map_chr, as.character) %>%
+#  dplyr::mutate(across(where(is.list), purrr::map_chr, as.character))
+

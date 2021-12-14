@@ -21,7 +21,7 @@
 
 /* Customize some of the sizing variables */
 :root {
-  --sidebar-width: 12rem !important; /* Shrink sidebar width  */
+  --sidebar-width: 14rem !important; /* Shrink sidebar width  */
   --sidebar-horizontal-padding: 0.02in; /* Reduce sidebar padding */
 }
 
@@ -34,7 +34,7 @@
   width: var(--sidebar-width) !important;
   padding-left: 0.75rem;
   padding-right: 0;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .aside .level2 {

@@ -58,7 +58,7 @@ CV %>% print_contact_info()
 # datadrivencv::build_network_logo(CV$entries_data)
 ```
 
-See full CV and project portfolio at [mclaibourn.github.io](https://mclaibourn.github.io/).
+Project portfolio at [mclaibourn.github.io](https://mclaibourn.github.io/).
 
 Main
 ================================================================================
@@ -79,10 +79,6 @@ Professional Experience {data-icon=suitcase}
 ```{r}
 CV %<>% print_text_block('professional_experience_aside')
 ```
-<br>
-<br>
-<br>
-Last updated on `r Sys.Date()`.
 :::
 
 ```{r}
@@ -92,6 +88,11 @@ CV %<>% print_section('professional_positions')
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
+::: aside
+```{r}
+CV %<>% print_text_block('skills_aside')
+```
+:::
 
 ```{r}
 CV %<>% print_section('education')
@@ -113,6 +114,12 @@ Selected Publications and Presentations {data-icon=book}
 ```{r}
 CV %<>% print_text_block('teaching_experience_aside')
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
+Last updated on `r Sys.Date()`.
 :::
 
 ```{r}
@@ -126,12 +133,6 @@ CV %<>% print_section('presentation')
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
-
-::: aside
-```{r}
-CV %<>% print_text_block('skills_aside')
-```
-:::
 
 ```{r}
 CV %<>% print_links()

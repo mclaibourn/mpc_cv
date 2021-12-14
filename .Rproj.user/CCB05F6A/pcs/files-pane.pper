@@ -1,9 +1,13 @@
 {
-    "path" : "~/Box Sync/mpc/mpc_cv",
-    "sortOrder" : [
+    "path": "~/Box Sync/mpc/mpc_cv",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 4,
+            "ascending": false
+        },
+        {
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }
